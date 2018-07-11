@@ -21,6 +21,12 @@ class ConverterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    var conversions = [Convert(label : "fahrenheit to celcius", input : "°F", output : "°C"),
+        Convert(label : "celcius to fahrenheit", input : "°C", output : "°F"),
+        Convert(label : "miles to kilometers", input : "mi", output : "km"),
+        Convert(label : "kilometers to miles", input : "km", output : "mi")]
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
