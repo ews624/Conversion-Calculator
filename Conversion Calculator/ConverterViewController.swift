@@ -47,16 +47,6 @@ class ConverterViewController: UIViewController {
             
         }))
         
-        alert.addAction(UIAlertAction(title: "Ferenheight to Celcius", style: UIAlertActionStyle.default, handler: {
-            (alertAction) -> Void in
-            
-            self.count = 0
-            self.choice = 3
-            self.inputDisplay.text = ""
-            self.outputDisplay.text = ""
-            
-        }))
-        
         alert.addAction(UIAlertAction(title: "Celcius to Ferenheight", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
@@ -67,7 +57,15 @@ class ConverterViewController: UIViewController {
            
             
         }))
-        
+        alert.addAction(UIAlertAction(title: "Ferenheight to Celcius", style: UIAlertActionStyle.default, handler: {
+            (alertAction) -> Void in
+            
+            self.count = 0
+            self.choice = 3
+            self.inputDisplay.text = ""
+            self.outputDisplay.text = ""
+            
+        }))
         self.present(alert, animated: true, completion: nil)
     }
         
@@ -135,9 +133,9 @@ class ConverterViewController: UIViewController {
         case 2:
             self.outputDisplay.text = self.KMToMiles(numbers)
         case 3:
-            self.outputDisplay.text = self.fTC(numbers)
-        case 4:
             self.outputDisplay.text = self.cTF(numbers)
+        case 4:
+            self.outputDisplay.text = self.fTC(numbers)
         default:
             self.outputDisplay.text = "default"
         }
