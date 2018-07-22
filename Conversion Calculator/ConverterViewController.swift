@@ -29,7 +29,7 @@ class ConverterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Miles to Kilometers", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            self.count = 0
+            //self.count = 0
             self.choice = 1
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
@@ -39,7 +39,7 @@ class ConverterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Kilometers to Miles", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            self.count = 0
+            //self.count = 0
             self.choice = 2
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
@@ -47,20 +47,20 @@ class ConverterViewController: UIViewController {
             
         }))
         
-        alert.addAction(UIAlertAction(title: "Celcius to Ferenheight", style: UIAlertActionStyle.default, handler: {
+        alert.addAction(UIAlertAction(title: "Ferenheight to Celcius", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            self.count = 0
+            //self.count = 0
             self.choice = 4
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
            
             
         }))
-        alert.addAction(UIAlertAction(title: "Ferenheight to Celcius", style: UIAlertActionStyle.default, handler: {
+        alert.addAction(UIAlertAction(title: "Celcius to Ferenheight", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            self.count = 0
+           // self.count = 0
             self.choice = 3
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
@@ -75,13 +75,14 @@ class ConverterViewController: UIViewController {
     
     @IBAction func plusMinus(_ sender: UIButton) {
         
+        
         if numbers == ""{
             return
         }
         if numbers == "." {
             return
         }
-        
+ 
         var new: Double
         
         if let check = Double(numbers),
@@ -102,16 +103,16 @@ class ConverterViewController: UIViewController {
         
         switch choice {
         case 1:
-            count = 0
+            //count = 0
             self.outputDisplay.text = self.milesToKM(numbers)
         case 2:
-            count = 0
+            //count = 0
             self.outputDisplay.text = self.KMToMiles(numbers)
         case 3:
-            count = 0
+            //count = 0
             self.outputDisplay.text = self.fTC(numbers)
         case 4:
-            count = 0
+            //count = 0
             self.outputDisplay.text = self.cTF(numbers)
         default:
             self.outputDisplay.text = "default"
@@ -189,7 +190,7 @@ class ConverterViewController: UIViewController {
     
     
     func milesToKM(_ miles: String) -> String {
-        
+        //inputDisplay.text = inputDisplay.text! + "mi"
         let new: Double = Double(miles)!
         let multiplier: Double = 1.61
         
@@ -200,7 +201,7 @@ class ConverterViewController: UIViewController {
     }
     
     func KMToMiles(_ kilometers: String) -> String {
-        
+        //inputDisplay.text = inputDisplay.text! + "km"
         let new: Double = Double(kilometers)!
         let multiplier: Double = 0.62
         let total = new * multiplier
