@@ -20,7 +20,8 @@ class ConverterViewController: UIViewController {
     
     @IBOutlet weak var plusMinus: UIButton!
     
-    var choice: Int = 1
+    
+    var choice : Int = 1
     
     
     @IBAction func convertButton(_ sender: Any) {
@@ -28,7 +29,7 @@ class ConverterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Miles to Kilometers", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            
+            self.count = 0
             self.choice = 1
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
@@ -38,7 +39,7 @@ class ConverterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Kilometers to Miles", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            
+            self.count = 0
             self.choice = 2
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
@@ -49,7 +50,7 @@ class ConverterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ferenheight to Celcius", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            
+            self.count = 0
             self.choice = 3
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
@@ -59,7 +60,7 @@ class ConverterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Celcius to Ferenheight", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
             
-            
+            self.count = 0
             self.choice = 4
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
@@ -151,11 +152,11 @@ class ConverterViewController: UIViewController {
         
         
     }
-    
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -184,7 +185,7 @@ class ConverterViewController: UIViewController {
             count = 1
         }
     }
-    var count = 0
+    
     @IBAction func addDemical(_ sender: UIButton){
         if count == 0 {
           numbers = numbers + "."
