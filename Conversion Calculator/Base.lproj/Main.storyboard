@@ -212,7 +212,6 @@
                                                         <state key="normal" title="."/>
                                                         <connections>
                                                             <action selector="decimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uZ-45-o7W"/>
-                                                            <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5n1-A2-G4p"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -252,7 +251,6 @@
                     </view>
                     <connections>
                         <outlet property="clearButton" destination="aZw-MG-dVY" id="3Sp-jf-XYC"/>
-                        <outlet property="decimalButton" destination="os0-m6-fTR" id="zR6-Ep-eI4"/>
                         <outlet property="inputDisplay" destination="5g9-3P-GHy" id="5Hs-84-0xF"/>
                         <outlet property="outputDisplay" destination="mja-D5-vJX" id="fVW-XE-tYd"/>
                         <outlet property="plusMinus" destination="i1H-hB-taP" id="JNV-r2-hFx"/>

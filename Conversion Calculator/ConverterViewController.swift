@@ -102,12 +102,16 @@ class ConverterViewController: UIViewController {
         
         switch choice {
         case 1:
+            count = 0
             self.outputDisplay.text = self.milesToKM(numbers)
         case 2:
+            count = 0
             self.outputDisplay.text = self.KMToMiles(numbers)
         case 3:
+            count = 0
             self.outputDisplay.text = self.fTC(numbers)
         case 4:
+            count = 0
             self.outputDisplay.text = self.cTF(numbers)
         default:
             self.outputDisplay.text = "default"
@@ -178,18 +182,11 @@ class ConverterViewController: UIViewController {
     
     @IBAction func decimalButton(_ sender: UIButton) {
         if count == 0 {
-            numbers = numbers + "."
-            
+        inputDisplay.text = inputDisplay.text! + "."
             count = 1
         }
     }
     
-    @IBAction func addDemical(_ sender: UIButton){
-        if count == 0 {
-          numbers = numbers + "."
-            count = 1
-        }
-    }
     
     func milesToKM(_ miles: String) -> String {
         
