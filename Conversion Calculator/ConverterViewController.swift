@@ -212,15 +212,17 @@ class ConverterViewController: UIViewController {
     func fTC(_ ferenheight: String) -> String{
         let new: Double = Double(ferenheight)!
         
-        let total = (new - 32) * (5/9)
-        return String(format: "%.2f", total ) + " \u{00b0}C"
+        let ferenheight = (new - 32) * (5/9)
+        let total : String = String(ferenheight) + "\u{00b0}C"
+        return total
     }
     
     func cTF(_ celcius: String) -> String {
         
         let new: Double = Double(celcius)!
-        let total = new * (9/5) + 32
-        return String(format: "%.2f", total ) + " \u{00b0}F"
+        let celcius = new * (9/5) + 32
+        let total : String =  String(celcius) + "\u{00b0}F"
+        return total
     }
     
     
