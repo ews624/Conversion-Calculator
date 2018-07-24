@@ -16,7 +16,7 @@ class ConverterViewController: UIViewController {
     @IBOutlet weak var decimalButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
-   // @IBOutlet weak var plusMinus: UIButton!
+    @IBOutlet weak var plusMinus: UIButton!
 
     var choice : Int = 1
     var unit: String = ""
