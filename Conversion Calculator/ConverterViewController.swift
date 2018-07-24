@@ -98,8 +98,14 @@ class ConverterViewController: UIViewController {
             numbers = String(new)
             count = 1
             
-        } else{
-            numbers = "-" + numbers
+        }
+        if let check = Double(numbers),
+            check > 0 {
+                numbers = "-" + numbers
+            }
+        if let check = Double(numbers),
+            check == 0 {
+            return
         }
         
         inputDisplay.text = numbers + " " + inputs[choice-1]
