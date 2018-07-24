@@ -14,15 +14,25 @@ class ConverterViewController: UIViewController {
     @IBOutlet weak var inputDisplay: UITextField!
     
     @IBOutlet weak var decimalButton: UIButton!
-    
-    
     @IBOutlet weak var clearButton: UIButton!
     
-    @IBOutlet weak var plusMinus: UIButton!
-    
-    
+   // @IBOutlet weak var plusMinus: UIButton!
+
     var choice : Int = 1
+    var unit: String = ""
+    var count = 0
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+
     
     @IBAction func convertButton(_ sender: Any) {
         let alert = UIAlertController(title: "Choose a Conversion", message : "", preferredStyle: UIAlertControllerStyle.actionSheet)
@@ -44,7 +54,6 @@ class ConverterViewController: UIViewController {
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
             
-            
         }))
         
         alert.addAction(UIAlertAction(title: "Ferenheight to Celcius", style: UIAlertActionStyle.default, handler: {
@@ -55,7 +64,6 @@ class ConverterViewController: UIViewController {
             self.inputDisplay.text = ""
             self.outputDisplay.text = ""
            
-            
         }))
         alert.addAction(UIAlertAction(title: "Celcius to Ferenheight", style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
@@ -69,9 +77,7 @@ class ConverterViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
         
-    
-        
-    
+
     
     @IBAction func plusMinus(_ sender: UIButton) {
         
@@ -92,10 +98,7 @@ class ConverterViewController: UIViewController {
             numbers = String(new)
             count = 1
             
-        }
-            
-            
-        else{
+        } else{
             numbers = "-" + numbers
         }
         
@@ -122,7 +125,7 @@ class ConverterViewController: UIViewController {
     }
     
     
-    var unit: String = ""
+    
     @IBAction func numbers(_ sender: UIButton) {
        inputDisplay.text = inputDisplay.text! + String(sender.tag)
         
@@ -149,20 +152,12 @@ class ConverterViewController: UIViewController {
     
     
     @IBAction func clearButton(_ sender: UIButton) {
-        
         inputDisplay.text = ""
         outputDisplay.text = ""
-        
-        
     }
-    var count = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-
+    
+    
     var conversions = [Convert(label : "fahrenheit to celcius", input : "°F", output : "°C"),
         Convert(label : "celcius to fahrenheit", input : "°C", output : "°F"),
         Convert(label : "miles to kilometers", input : "mi", output : "km"),
@@ -175,10 +170,7 @@ class ConverterViewController: UIViewController {
     var outputs = ["km", "mi", "\u{00B0}C", "\u{00B0}F"]
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     
     @IBAction func decimalButton(_ sender: UIButton) {
